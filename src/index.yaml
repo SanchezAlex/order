@@ -1,5 +1,5 @@
 ProjectTitle: horoshop-order-form
 
 PageList:
-- file: order.html
+- file: _order.html
   ready: 50
