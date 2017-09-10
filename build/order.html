@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Horoshop | Order page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <div class="order">
+        <div class="container">
+          <h1 class="order__title">Оформление заказа</h1>
+          <div class="order__wrap">
+            <div class="customer">
+              <ul class="customer__tabs">
+                <li class="active">Я новый покупатель</li>
+                <li class="inactive">Я зарегестрированный покупатель</li>
+              </ul>
+              <div class="customer__wrap">
+                <div class="customer__info">
+                  <h2 class="order__info">Получатель заказа</h2>
+                  <form action="">
+                    <p> <label class="order__label" for="customer-name">
+                  <span>Имя и фамилия</span>
+                </label> <input type="text" id="customer-name" class="order__input" name="username"> </p>
+                    <p> <label class="order__label" for="customer-phone">
+                  <span>Телефон</span>
+                </label> <input type="tel" id="customer-phone" class="order__input" name="phone"> </p>
+                    <p> <label class="order__label" for="customer-city">
+                  <span>Город</span>
+                </label> <input type="text" id="customer-city" class="order__input" name="city" placeholder="Киев"> </p>
+                    <p> <label class="order__label" for="customer-email">
+                  <span>Эл. почта</span>
+                </label> <input type="email" id="customer-email" class="order__input" name="email" placeholder="user@mail.com"> </p> <a href="" id="comment" class="order__comment">Добавить комментарий к заказу</a>
+                    <p> <textarea id="comment__content" class="customer__comment is-hide" rows="5"></textarea> </p>
+                  </form>
+                </div>
+                <div class="customer__delivery">
+                  <h2 class="order__info">Доставка</h2> <span>
+              <label for="delivery"></label>
+              <select id="delivery" class="delivery-select" name="delivery">
+                <option value="np">"Новая почта" - 25 грн.</option>
+                <option value="ms">"Мист экспресс" - 20 грн.</option>
+                <option value="sp">"Самовывоз" - бессплатно</option>
+              </select>
+            </span>
+                  <p> <label for="warehouse">
+                <span class="order__label">Адрес склада</span>
+              </label> <select id="warehouse" class="warehouse-select" name="warehouse">
+                <option value="np#8">Львов, Отделение №8 (до 30 кг): ул. Гетьмана И. Мазепы, 37</option>
+                <option value="np#7">Львов, Отделение №7 (до 30 кг): ул. Гетьмана И. Мазепы, 36</option>
+                <option value="np#6">Львов, Отделение №6 (до 30 кг): ул. Гетьмана И. Мазепы, 35</option>
+              </select> </p>
+                </div>
+                <div class="customer__payment">
+                  <h2 class="order__info">Оплата</h2> <span>
+              <label for="payment"></label>
+              <select id="payment" class="payment-select" name="payment">
+                <option value="cod">наложенный платёж</option>
+                <option value="vm">Visa/Master Card</option>
+                <option value="cash">наличными в офисе</option>
+              </select>
+            </span> </div>
+                <div class="order__submit"> <button type="submit">Оформить заказ</button> </div>
+              </div>
+            </div>
+            <div class="order__list">
+              <h2 class="order__list__title">Ваш заказ</h2>
+              <div class="order__item">
+                <div class="order__item__img"> <img src="../img/camera.jpg" alt="order image"> </div>
+                <div class="order__item__desc"> <a href="">Цифровий фотоапарат Nikon D5100 kit (18-55 VR)</a> </div>
+                <div class="order__item__amount"> <span>6 568 грн. × 1 шт.</span> </div>
+                <div class="order__item__total"> <span>6 568 грн.</span> </div>
+              </div>
+              <div class="order__item">
+                <div class="order__item__img"> <img src="../img/iphone.jpg" alt="order image"> </div>
+                <div class="order__item__desc"> <a href="">MP3-плеер Apple iPod Touch 5Gen 32Gb blue</a> </div>
+                <div class="order__item__amount"> <span>3 689 грн. × 1 шт.</span> </div>
+                <div class="order__item__total"> <span>3 689 грн.</span> </div>
+              </div>
+              <div class="order__sum"> <span>9 769,15 грн.</span> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>

@@ -1,0 +1,315 @@
+.order
+	background-color: #f9f7ee
+
+	&__wrap
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		padding-top: 15px
+		padding-bottom: 92px
+
+		+r(1023)
+			flex-direction: column
+
+	&__title
+		padding-top: 30px
+		font-size: 32px
+		font-family: sans-serif, "OpenSans"
+		color: rgb(35, 31, 32)
+		font-weight: normal
+
+	&__info
+		display: inline-block
+		padding-top: 25px
+		padding-bottom: 15px
+		font-size: 18px
+		font-family: sans-serif, "Arial"
+		color: rgb(35, 31, 32)
+		font-weight: bold
+
+	&__label
+		display: inline-block
+		width: 17.5%
+		margin-right: 5px
+		font-size: 16px
+		font-family: sans-serif, "Arial"
+		color: rgb(141, 141, 141)
+		text-align: left
+
+	&__input
+		display: inline-block
+		width: 45%
+		margin: 10px 0
+		padding: 5px 10px
+		border-style: solid
+		border-width: 1px
+		border-color: rgb(172, 172, 172)
+		border-radius: 3px
+		background-color: rgb(255, 255, 255)
+		box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.15)
+
+		font-size: 16px
+		font-family: sans-serif, "Arial"
+		color: #000
+
+		&:focus
+			border-color: #57b816
+			box-shadow: 0 0 5px 0 rgba(63, 64, 146, 1)
+
+	&__comment
+		display: inline-block
+		margin-left: 18.7%
+		margin-top: 12px
+		font-size: 16px
+		font-family: sans-serif, "Arial"
+		color: #0072bc
+
+		&:hover,
+		&:active
+			color: #004B7C
+			transition: color .3s ease-in
+
+	&__submit
+		display: inline-block
+		margin-left: 18.5%
+		padding: 22px 0
+
+		button
+			padding: 8px 17px 6px
+			font-size: 18px
+			font-family: sans-serif, "Arial"
+			color: #fff
+			font-weight: bold
+			background-color: #57b816
+			border-radius: 30px
+			transition: .3s ease-out
+
+			&:hover,
+			&:active
+				background-color: #69D91E
+				box-shadow: 0 0 10px 0 #161e0f
+
+	&__list
+		display: inline-block
+		padding: 10px
+		width: 32.5%
+		height: fit-content
+		border: solid 1px #e0dfca
+		border-radius: 4px
+		background-color: #fff
+
+		+r(1023)
+			width: 100%
+			margin-top: 20px
+
+		&__title
+			padding: 20px 10px 0
+			font-size: 18px
+			font-family: sans-serif, "Arial"
+			color: rgb(35, 31, 32)
+			font-weight: bold
+
+			&:after
+				content: ''
+				display: block
+				margin: 0 -20px
+				padding-bottom: 20px
+				border-bottom: dotted 1px #E0DFCA
+
+	&__item
+		padding: 15px 5px
+		+clr
+
+		&:after
+			content: ''
+			display: block !important
+			margin: 0 -15px
+			padding-bottom: 20px
+			border-bottom: dotted 1px #E0DFCA
+
+		&__img
+			display: inline-block
+			width: 20%
+			margin-right: 15px
+			padding: 0 5px
+			float: left
+
+		&__desc
+			display: inline-block
+			width: 75%
+			margin-bottom: 15px
+
+			a
+				font-size: 14px
+				font-family: sans-serif, "Arial"
+				color: rgb(0, 114, 188)
+				text-decoration: underline
+
+				&:hover,
+				&:active
+					color: #3e4baf
+					transition: color .2s ease
+
+		&__amount
+			display: inline-block
+			font-size: 14px
+			font-family: sans-serif, "Arial"
+			color: rgba(0, 0, 0, 0.6)
+
+		&__total
+			display: inline-block
+			float: right
+			font-size: 14px
+			font-family: sans-serif, "Arial"
+			color: rgb(0, 0, 0)
+			font-weight: bold
+
+	&__sum
+		display: inline-block
+		float: right
+		padding: 15px 10px
+		font-size: 18px
+		font-family: sans-serif, "Arial"
+		color: rgb(0, 0, 0)
+		font-weight: bold
+
+.customer
+	display: inline-block
+	width: 65%
+
+	+r(1023)
+		width: 100%
+
+	&__tabs
+		display: flex
+		justify-content: flex-start
+		margin-bottom: -1px
+
+		li
+			display: inline-block
+			padding: 15px 12px
+			box-sizing: border-box
+			font-size: 14px
+			font-family: sans-serif, "Arial"
+			font-weight: bold
+			line-height: 1.286
+			text-align: left
+
+			&:first-child
+				width: 120px
+				border-left: solid 1px #E0DFCA
+				border-right: solid 1px #E0DFCA
+				border-top: solid 1px #E0DFCA
+				border-top-left-radius: 4px
+
+			&:nth-child(2)
+				width: 200px
+				border-top: solid 1px #E0DFCA
+				border-right: solid 1px #E0DFCA
+				border-bottom: solid 1px #E0DFCA
+				border-top-right-radius: 4px
+
+			&:hover
+				cursor: pointer
+
+		.active
+			color: rgb(0, 0, 0)
+			background-color: #ffffff
+
+		.inactive
+			color: rgb(32, 115, 179)
+			text-decoration: underline
+			text-decoration-style: dotted
+			text-decoration-color: #2073b3
+
+	&__comment
+		width: 80%
+		margin-top: 10px
+		margin-left: 18.9%
+		padding: 10px
+		box-sizing: border-box
+
+		font-size: 16px
+		font-family: sans-serif, "Arial"
+		color: #000
+
+		&:focus
+			border-color: #57b816
+			box-shadow: 0 0 5px 0 rgba(63, 64, 146, 1)
+
+	&__wrap
+		padding-left: 29px
+		padding-right: 32px
+		background-color: #ffffff
+		border: solid 1px #E0DFCA
+		border-bottom-left-radius: 4px
+		border-bottom-right-radius: 4px
+
+		.delivery-select,
+		.warehouse-select,
+		.payment-select
+			display: inline-block
+			position: relative
+			padding: 5px
+			border-radius: 3px
+			border-style: solid
+			border-width: 1px
+			border-color: #ACACAC
+			box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.15)
+			background-color: #fff
+			font-size: 16px
+			font-family: sans-serif, "Arial"
+			color: #000
+
+			appearance: none
+			-webkit-appearance: none
+			-moz-appearance: none
+			-ms-appearance: none
+			background: url('../img/arrow-down.png')
+			background-repeat: no-repeat
+			background-position: right 10px
+
+			&:focus
+				border-color: #57b816
+				box-shadow: 0 0 5px 0 rgba(63, 64, 146, 1)
+
+	&__info,
+	&__delivery,
+	&__payment
+		&:after
+			content: ''
+			display: block
+			margin: 0 -32px 0 -29px
+			padding-bottom: 20px
+			border-bottom: dotted 1px #E0DFCA
+
+	&__info
+		.is-hide
+			display: none
+
+		.is-visible
+			display: inline-block
+
+	&__delivery
+		.order__info
+			width: 17.5%
+			margin-right: 5px
+
+		.delivery-select
+			width: 45%
+			margin-bottom: 10px
+
+		.warehouse-select
+			width: 80%
+			margin-top: 10px
+
+	&__payment
+		.order__info
+			width: 17.5%
+			margin-right: 5px
+			padding-bottom: 5px
+
+		.payment-select
+			width: 45%
+
+
