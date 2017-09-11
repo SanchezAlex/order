@@ -35,6 +35,7 @@
 		font-family: sans-serif, "Arial"
 		color: rgb(141, 141, 141)
 		text-align: left
+		vertical-align: middle
 
 	&__input
 		display: inline-block
@@ -56,6 +57,33 @@
 			border-color: #57b816
 			box-shadow: 0 0 5px 0 rgba(63, 64, 146, 1)
 
+	&__select
+		display: inline-block
+		position: relative
+		padding: 5px
+		border-radius: 3px
+		border-style: solid
+		border-width: 1px
+		border-color: #ACACAC
+		box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.15)
+		background-color: #fff
+		font-size: 16px
+		font-family: sans-serif, "Arial"
+		color: #000
+
+		appearance: none
+		-webkit-appearance: none
+		-moz-appearance: none
+		-ms-appearance: none
+		background: url('../img/arrow-down.png')
+		background-repeat: no-repeat
+		background-position: right 10px
+
+		&:focus
+			border-color: #57b816
+			box-shadow: 0 0 5px 0 rgba(63, 64, 146, 1)
+
+
 	&__comment
 		display: inline-block
 		margin-left: 18.7%
@@ -74,7 +102,7 @@
 		margin-left: 18.5%
 		padding: 22px 0
 
-		button
+		&__btn
 			padding: 8px 17px 6px
 			font-size: 18px
 			font-family: sans-serif, "Arial"
@@ -91,7 +119,7 @@
 
 	&__list
 		display: inline-block
-		padding: 10px
+		padding: 10px 0
 		width: 32.5%
 		height: fit-content
 		border: solid 1px #e0dfca
@@ -103,7 +131,7 @@
 			margin-top: 20px
 
 		&__title
-			padding: 20px 10px 0
+			padding: 20px 20px 0
 			font-size: 18px
 			font-family: sans-serif, "Arial"
 			color: rgb(35, 31, 32)
@@ -117,38 +145,32 @@
 				border-bottom: dotted 1px #E0DFCA
 
 	&__item
-		padding: 15px 5px
-		+clr
+		display: flex
+		padding: 15px
+		border-bottom: dotted 1px #E0DFCA
 
-		&:after
-			content: ''
-			display: block !important
-			margin: 0 -15px
-			padding-bottom: 20px
-			border-bottom: dotted 1px #E0DFCA
+		&__wrap
+			width: 75%
 
 		&__img
-			display: inline-block
 			width: 20%
 			margin-right: 15px
 			padding: 0 5px
 			float: left
 
 		&__desc
-			display: inline-block
-			width: 75%
 			margin-bottom: 15px
 
-			a
-				font-size: 14px
-				font-family: sans-serif, "Arial"
-				color: rgb(0, 114, 188)
-				text-decoration: underline
+		&__link
+			font-size: 14px
+			font-family: sans-serif, "Arial"
+			color: rgb(0, 114, 188)
+			text-decoration: underline
 
-				&:hover,
-				&:active
-					color: #3e4baf
-					transition: color .2s ease
+			&:hover,
+			&:active
+				color: #3e4baf
+				transition: color .2s ease
 
 		&__amount
 			display: inline-block
@@ -185,7 +207,7 @@
 		justify-content: flex-start
 		margin-bottom: -1px
 
-		li
+		&__user
 			display: inline-block
 			padding: 15px 12px
 			box-sizing: border-box
@@ -245,34 +267,6 @@
 		border-bottom-left-radius: 4px
 		border-bottom-right-radius: 4px
 
-		.delivery-select,
-		.warehouse-select,
-		.payment-select
-			display: inline-block
-			position: relative
-			padding: 5px
-			border-radius: 3px
-			border-style: solid
-			border-width: 1px
-			border-color: #ACACAC
-			box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.15)
-			background-color: #fff
-			font-size: 16px
-			font-family: sans-serif, "Arial"
-			color: #000
-
-			appearance: none
-			-webkit-appearance: none
-			-moz-appearance: none
-			-ms-appearance: none
-			background: url('../img/arrow-down.png')
-			background-repeat: no-repeat
-			background-position: right 10px
-
-			&:focus
-				border-color: #57b816
-				box-shadow: 0 0 5px 0 rgba(63, 64, 146, 1)
-
 	&__info,
 	&__delivery,
 	&__payment
@@ -295,13 +289,14 @@
 			width: 17.5%
 			margin-right: 5px
 
-		.delivery-select
+		.order__select
 			width: 45%
 			margin-bottom: 10px
 
-		.warehouse-select
-			width: 80%
-			margin-top: 10px
+		&__warehouse
+			.order__select
+				width: 80%
+				margin-top: 10px
 
 	&__payment
 		.order__info
@@ -309,7 +304,7 @@
 			margin-right: 5px
 			padding-bottom: 5px
 
-		.payment-select
+		.order__select
 			width: 45%
 
 
